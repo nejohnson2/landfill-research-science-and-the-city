@@ -18,26 +18,26 @@
 
 String[] landfills;
 String outputPath;
-String outputPathAbsolute = "/Users/Luce/Documents/Processing/landfill_locations/imagery-media-latlon";
+String outputPathAbsolute = "/Users/Luce/Documents/Processing/landfill_locations/imagery-media-latlon"; //change to file location
 Boolean initiate = false;
 String inputFile;
 PGraphics pg;
 int zoom = 14; // set google map zoom level - lower number means farther away
 
 void setup() {
-  size(640,640);
-  //selectInput("Select a file to process:", "fileSelected");
+  size(640,640); 
+  //selectInput("Select a file to process:", "fileSelected");  // allows a popup so you can choose the file instead of hardcoding
   initiate = true;
   textFont(createFont("Georgia", 24));
-  pg = createGraphics(640,640);
+  pg = createGraphics(640,640); // max size for google
 }
 
 void draw() {
   if(initiate == true){
 
-    //landfills = loadStrings(inputFile);
+    //landfills = loadStrings(inputFile); // if using input method
     //landfills = loadStrings("epa_landfills.csv");
-    landfills = loadStrings("MEDIA_LATLON.csv");
+    landfills = loadStrings("MEDIA_LATLON.csv"); // file that contains the lat/lon
     
     for(int i = 1226; i < landfills.length; i++) {  
       String[] values = split(landfills[i], ",");  // This loads the whole csv seperated by commas
@@ -46,13 +46,16 @@ void draw() {
       String lon = values[2]; // this pulls the individual item
       String na = "NA";
       
-      println(i+ "- " + lat + ", " + lon);
+      println(i+ "- " + lat + ", " + lon);  // for debuging
       
       if(lat.equals(na) == true){
         println("no lat lon");
       } else {
         PImage test = getSatImage(lat,lon);
+        
         //********************* Print Lat lon on Image ******************//
+        // this is how I know where each landfill image is actually located.
+        
         pg.beginDraw();
         pg.background(test);
         pg.fill(0, 140);
@@ -64,6 +67,7 @@ void draw() {
         pg.endDraw();
         image(pg,0,0);
         pg.save(outputPathAbsolute + "/landfill-" + i + "-zoom-" + zoom + ".jpg");
+        
       }
       delay(1000); // Wait one second.  Google freaks out if you try to do it faster
     }
