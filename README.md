@@ -24,7 +24,7 @@ The processing sketch in this repo takes the latitude and longitutde information
 
 3) The Processing sketch takes a long time to run and there is a limit to how many images you can take in Google Maps for a given time period.  I've estimated its about 200 for 8 hours.  If anyone knows this it would be incredible helpful.  This is based off you IP address therefore if you wish to capture more images, you need to move to different locations.
 
-###Goals for the Hackfest
+####Goals for the Hackfest
 
 1) __Research what the EPA data set means.__ There are many columns which are non-descriptive.  To have a document or resource which accurately describes these columns would be very useful.
 
@@ -32,4 +32,8 @@ The processing sketch in this repo takes the latitude and longitutde information
 
 3) __Any analysis from the EPA dataset.__  Which states have the most landfills?  Which landfills are fined the most?  What is the average fine of a landfill?  What is the inspection rate? etc...
 
-4) __Something crazy and ridiculous that I havent thought of.__
+4) __Make an infographic for the 'most beautiful' landfills.__ Aerial imageery of landfills is amazing.  Any images captured that showcase this would be interesting.
+
+5) __Something crazy and ridiculous that I havent thought of.__
+
+6) __Would be great to write a blog post__ This could be hosted on the Open Trash Lab webpage.  www.opentrashlab.com  I would be happy to post it on behalf of anyone.
