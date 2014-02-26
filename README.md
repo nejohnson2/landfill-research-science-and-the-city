@@ -10,7 +10,7 @@ The EPA has a database located online which contains information related to all 
 
 The file itself contains address, Lat/Lon location, city, state, days since last inspection and much more.  There are many columns however which I do not fully understand what they represent.  Any research to better understand how these columns are collected and what exactly the data represents would be fantastic.
 
-http://echo.epa.gov/?redirect=echo
+EPA Database: http://echo.epa.gov/?redirect=echo
 
 ####Processing Sketch
 
